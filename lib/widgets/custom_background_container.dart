@@ -11,7 +11,6 @@ class CustomBackgroundContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        clipBehavior: Clip.antiAlias,
         padding: EdgeInsets.all(paddingvalue),
         decoration: BoxDecoration(
           color: Colors.white,

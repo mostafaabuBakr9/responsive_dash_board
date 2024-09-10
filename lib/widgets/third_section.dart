@@ -13,11 +13,11 @@ class ThirdSection extends StatelessWidget {
         SizedBox(
           height: 12,
         ),
-        Expanded(child: MycardTransactionHistorySection()),
+        MycardTransactionHistorySection(),
         SizedBox(
           height: 24,
         ),
-        InCome(),
+        Expanded(child: InCome()),
         SizedBox(
           height: 12,
         )

@@ -34,37 +34,47 @@ class _AllExpensessItemListViewState extends State<AllExpensessItemListView> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: items.asMap().entries.map((e) {
-        int index = e.key;
-        if (index == 1) {
-          return Expanded(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12),
-              child: GestureDetector(
-                onTap: () {
-                  updateindex(index);
-                },
-                child: AllExpensessItem(
-                  isSelected: selectedindex == index ? true : false,
-                  allExpensessItemModel: items[index],
-                ),
-              ),
+      children: [
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              updateindex(0);
+            },
+            child: AllExpensessItem(
+              isSelected: selectedindex == 0 ? true : false,
+              allExpensessItemModel: items[0],
             ),
-          );
-        } else {
-          return Expanded(
-            child: GestureDetector(
-              onTap: () {
-                updateindex(index);
-              },
-              child: AllExpensessItem(
-                isSelected: selectedindex == index ? true : false,
-                allExpensessItemModel: items[index],
-              ),
+          ),
+        ),
+        const SizedBox(
+          width: 5,
+        ),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              updateindex(1);
+            },
+            child: AllExpensessItem(
+              isSelected: selectedindex == 1 ? true : false,
+              allExpensessItemModel: items[1],
             ),
-          );
-        }
-      }).toList(),
+          ),
+        ),
+        const SizedBox(
+          width: 5,
+        ),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              updateindex(2);
+            },
+            child: AllExpensessItem(
+              isSelected: selectedindex == 2 ? true : false,
+              allExpensessItemModel: items[2],
+            ),
+          ),
+        )
+      ],
     );
   }
 

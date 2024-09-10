@@ -11,20 +11,20 @@ class TransactionHistory extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-          const Text(
+           Text(
             'Transaction History',
-            style: AppStyles.styleSemiBold20,
+            style: AppStyles.styleSemiBold20(context),
           ),
           Text(
             'See all',
-            style: AppStyles.styleMedium16
+            style: AppStyles.styleMedium16(context)
                 .copyWith(color: const Color(0xFF4DB7F2)),
           )
         ]),
         const SizedBox(
           height: 20,
         ),
-        const Text('13 April 2022', style: AppStyles.styleRegular16),
+         Text('13 April 2022', style: AppStyles.styleRegular16(context)),
       ],
     );
   }

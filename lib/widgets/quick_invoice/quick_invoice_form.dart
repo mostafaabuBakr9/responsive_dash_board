@@ -46,18 +46,18 @@ class QuickInvoiceForm extends StatelessWidget {
                     backgroundColor: Colors.white,
                     text: Text(
                       'Add more details',
-                      style: AppStyles.styleSemiBold18
+                      style: AppStyles.styleSemiBold18(context)
                           .copyWith(color: const Color(0xFF4DB7F2)),
                     ))),
             const SizedBox(
               width: 24,
             ),
-            const Expanded(
+             Expanded(
                 child: CustomButton(
                     backgroundColor: Color(0xFF4DB7F2),
                     text: Text(
                       'Send Money',
-                      style: AppStyles.styleSemiBold18,
+                      style: AppStyles.styleSemiBold18(context),
                     ))),
           ],
         )
