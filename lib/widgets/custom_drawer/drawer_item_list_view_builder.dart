@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/models/drawer_item_model.dart';
 import 'package:responsive_dash_board/utils/app_images.dart';
-import 'package:responsive_dash_board/widgets/custom_drawer_item.dart';
+import 'package:responsive_dash_board/widgets/custom_drawer/custom_drawer_item.dart';
 
 class DrawerItemListViewBuilder extends StatefulWidget {
-  const DrawerItemListViewBuilder({
+  const  DrawerItemListViewBuilder({
     super.key,
   });
 
@@ -40,10 +40,9 @@ class _DrawerItemListViewBuilderState extends State<DrawerItemListViewBuilder> {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      shrinkWrap: true,
+    return SliverList.builder(
+      
       itemCount: items.length,
-      physics: const NeverScrollableScrollPhysics(),
       itemBuilder: (context, index) {
         return GestureDetector(
           onTap: () {
